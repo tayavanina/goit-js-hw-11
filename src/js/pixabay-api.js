@@ -4,6 +4,11 @@
 // здійснювати HTTP-запит і повертати значення властивості data з отриманої відповіді.
 
 import axios from 'axios';
+
+// Описаний у документації
+import iziToast from 'izitoast';
+// Додатковий імпорт стилів
+import 'izitoast/dist/css/iziToast.min.css';
 const myApiKey = '57567938-a750dc86e3e74b59c9f6f987b';
 
 export function getImagesByQuery(query) {

@@ -42,6 +42,13 @@ function handleSubmit(event) {
 
       createGallery(data.hits);
     })
+    .catch(error => {
+      iziToast.error({
+        position: 'topRight',
+        title: `${error}`,
+        message: `${error.message}`,
+      });
+    })
     .finally(() => {
       hideLoader();
     });
