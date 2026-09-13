@@ -29,5 +29,6 @@ export function getImagesByQuery(query) {
         title: `${error}`,
         message: `${error.message}`,
       });
+      throw error;
     });
 }
