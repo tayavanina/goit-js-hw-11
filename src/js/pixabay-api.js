@@ -19,6 +19,10 @@ export function getImagesByQuery(query) {
     })
     .then(response => response.data)
     .catch(error => {
-      console.log(error.message);
+      iziToast.error({
+        position: 'topRight',
+        title: `${error}`,
+        message: `${error.message}`,
+      });
     });
 }

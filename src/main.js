@@ -15,7 +15,6 @@ import iziToast from 'izitoast';
 // Додатковий імпорт стилів
 import 'izitoast/dist/css/iziToast.min.css';
 
-const gallery = document.querySelector('.gallery');
 const form = document.querySelector('.form');
 form.addEventListener('submit', handleSubmit);
 
@@ -25,7 +24,8 @@ function handleSubmit(event) {
   const inputWord = event.target.elements['search-text'].value.trim();
 
   if (inputWord === '') {
-    return iziToast.show({
+    return iziToast.error({
+      position: 'topRight',
       message: 'Please enter the word to search!',
     });
   }
